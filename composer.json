@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "HDNET\\Helma\\": "docroot/typo3conf/ext/helma/Classes/"
+      "ReneRoboter\\Documentext\\": "docroot/typo3conf/ext/documentext/Classes/"
     }
   },
   "autoload-dev": {
