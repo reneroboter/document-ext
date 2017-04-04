@@ -1,0 +1,99 @@
+######################
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+xhprof-master
+bower_components
+vendor
+
+################
+# Single files #
+################
+/docroot/.htaccess
+/docroot/index.php
+*.log
+*.gz
+
+# files directory #
+!/files/typo3.sql.gz
+
+
+######################
+# Versioning systems #
+######################
+.svn
+
+
+# FE build related files #
+/docroot/typo3conf/ext/helma/Resources/Public/Build
+/docroot/typo3conf/ext/helma/Resources/Public/Images
+
+##################################
+# Typo3 specific files & folders #
+##################################
+
+/docroot/fileadmin
+/docroot/uploads
+
+#################
+# TYPO3 sources #
+#################
+/docroot/t3lib
+/docroot/typo3
+/docroot/typo3_src*
+
+######################
+# TYPO3 config files #
+######################
+/docroot/typo3conf/AdditionalConfiguration.php
+/docroot/typo3conf/LOCK_BACKEND
+/docroot/typo3conf/ENABLE_INSTALL_TOOL
+
+# TYPO3 Extension #
+/docroot/typo3conf/ext/*
+!/docroot/typo3conf/ext/hdnet
+!/docroot/typo3conf/ext/t3m
+!/docroot/typo3conf/ext/helma
+!/docroot/typo3conf/ext/helma_map
+
+##############
+# Temp files #
+##############
+/docroot/typo3conf/temp_*
+/docroot/typo3conf/l10n
+/docroot/typo3conf/ext/powermail/Resources/Public/Image/captcha.png
+/docroot/typo3temp/
+
+############
+# PhpStorm #
+############
+/.idea/workspace.xml
+/.idea/tasks.xml
+/atlassian-ide-plugin.xml
+*.idea/*
+
+
+
+###############
+# Build tools #
+###############
+/node_modules
+/npm-debug.log
+
+#######
+# Dev #
+#######
+/Vagrantfile
+/.vagrant
+/vagrant-provision/keys/
+/docker-compose.yml
+/.Build
+
+#####################
+# Global exceptions #
+#####################
+
+!.index.html
+!.gitkeep

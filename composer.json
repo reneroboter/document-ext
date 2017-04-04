@@ -1,0 +1,53 @@
+{
+  "name": "document-ext",
+  "description": "DocumentExt",
+  "license": "proprietary",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    }
+  ],
+  "require": {
+    "friendsoftypo3/openid": "~7.6.1",
+    "lochmueller/autoloader": "~2.1.0",
+    "typo3/cms": "~7.6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "HDNET\\Helma\\": "docroot/typo3conf/ext/helma/Classes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HDNET\\Helma\\Tests\\": "docroot/typo3conf/ext/helma/Tests/"
+    }
+  },
+  "config": {
+    "secure-http": false,
+    "sort-packages": true
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "docroot"
+    },
+    "helhum/typo3-console": {
+      "install-binary": false
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "rm docroot/index.php && cp vendor/typo3/cms/index.php docroot/",
+      "rm -rf docroot/typo3temp/Cache/Code/"
+    ],
+    "post-install-cmd": [
+      "rm docroot/index.php && cp vendor/typo3/cms/index.php docroot/",
+      "rm -rf docroot/typo3temp/Cache/Code/"
+    ]
+  }
+}
