@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+### Install Node.js / npm /grunt in the Vagrant-Box ###
+# npm install
+# start grunt and watcher
+# grunt
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "Helma"
+  config.vm.box_url = "../vagrant_jessie_v3.box"
+
+  config.vm.network "private_network", ip: "10.10.10.240"
+  config.ssh.forward_agent = true
+  config.vm.synced_folder "./", "/var/www/", :nfs => false
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "2048"
+    vb.customize "post-boot",["controlvm", :id, "setlinkstate1", "on"]
+  end
+
+  config.vm.provision "shell", path: "vagrant-provision/05-php-ini.sh"
+  config.vm.provision "shell", path: "vagrant-provision/30-additional-configuration.sh", args: "Helma"
+  config.vm.provision "shell", path: "vagrant-provision/40-mysql-import.sh"
+  config.vm.provision "shell", path: "vagrant-provision/50-htaccess.sh"
+end
