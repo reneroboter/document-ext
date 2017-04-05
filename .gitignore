@@ -53,10 +53,7 @@ vendor
 
 # TYPO3 Extension #
 /docroot/typo3conf/ext/*
-!/docroot/typo3conf/ext/hdnet
-!/docroot/typo3conf/ext/t3m
-!/docroot/typo3conf/ext/helma
-!/docroot/typo3conf/ext/helma_map
+!/docroot/typo3conf/ext/documentext
 
 ##############
 # Temp files #
