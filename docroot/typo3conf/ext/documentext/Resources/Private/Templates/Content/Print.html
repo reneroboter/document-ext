@@ -1,0 +1,161 @@
+{namespace r=ReneRoboter\Documentext\ViewHelpers}
+<div class="container" id="print" xmlns:f="http://www.w3.org/1999/html">
+    <div class="section">
+        <div class="row">
+            <div class="col-xs-6">
+                <f:image src="EXT:documentext/Resources/Public/Images/logo-g-140x61.gif" class="logo"/>
+            </div>
+            <div class="col-xs-6">
+                <p class="text-right">
+                    <strong>Ausbildungsjahr </strong> {apprenticeshipYear}
+                </p>
+                <p class="text-right">
+                    Fachinformatiker zur <br/>
+                    Anwendungsentwicklung
+                </p>
+            </div>
+            <div class="col-xs-12">
+                <hr/>
+            </div>
+            <div class="col-xs-6">
+                <p class="text-left">
+                    <strong>René Backhaus</strong><br/>
+                    <strong>Ausbildungsnachweisnr.</strong> {apprenticeshipNumber}
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <p class="text-right">
+                    <strong>Kalenderwoche</strong> {weekNumber}<br/>
+                    <strong>vom</strong>
+                    <f:format.date date="{weekStart}" format="d.m.Y"/>
+                    <strong>bis</strong>
+                    <f:format.date date="{weekend}" format="d.m.Y"/>
+                </p>
+            </div>
+            <div class="col-xs-12">
+                <hr/>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Betriebliche Tätigkeiten</h4>
+                </div>
+
+                <div class="col-xs-12">
+                    <hr/>
+                </div>
+
+                <div class="col-xs-12">
+                    <f:if condition="{work}">
+                        <f:then>
+                            <f:for each="{work}" as="show">
+                                <p class="bodytext">
+                                    <strong>
+                                        <r:dateTranslate date="{show.workdayAt}" />
+                                    </strong>
+                                    <br/>
+                                </p>
+                                <f:format.html>{show.description}</f:format.html>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            Für diese Woche liegen keine Einträge vor
+                        </f:else>
+                    </f:if>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Berufssschule</h4>
+                </div>
+
+                <div class="col-xs-12">
+                    <hr/>
+                </div>
+
+                <div class="col-xs-12">
+                    <f:if condition="{school}">
+                        <f:then>
+                            <f:for each="{school}" as="show">
+                                <p class="bodytext">
+                                    <strong>
+                                        <r:dateTranslate date="{show.workdayAt}" />
+                                    </strong>
+                                    <br/>
+                                </p>
+                                <f:format.html>{show.description}</f:format.html>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            Für diese Woche liegen keine Einträge vor
+                        </f:else>
+                    </f:if>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="section hidden-print">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="pull-let">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Auszubildender</strong>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="pull-rigt">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Ausbildender</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer visible-print">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="pull-let">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Auszubildender</strong>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="pull-rigt">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Ausbildender</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    // Kann Besser gelöst werden ...
+    // Das Jahr kann einfach aus dem Datum genommen werden
+    // Und die Nr für den Ausbildungsnachweis kann auch einfach abgeleitet werden
+    /*
+     var certificate = prompt("Bitte geben Sie die Nr für Ihren Ausbildungsnachweis ein!");
+     if (certificate != null) {
+     document.getElementById("certificate").innerHTML = certificate;
+     }
+
+     var year = prompt("Bitte geben Sie das Ausbildungsjahr ein!");
+     if (year != null) {
+     document.getElementById("year").innerHTML = year;
+     }
+     /*
+     window.print();
+</script>
