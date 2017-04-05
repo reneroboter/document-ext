@@ -1,7 +1,11 @@
 <?php
-
+/**
+ * Class DateUtility
+ */
 namespace ReneRoboter\Documentext\Utility;
-
+/**
+ * Class DateUtility
+ */
 class DateUtility
 {
 

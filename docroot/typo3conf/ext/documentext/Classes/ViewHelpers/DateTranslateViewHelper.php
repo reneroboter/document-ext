@@ -1,8 +1,15 @@
 <?php
-
+/**
+ * Class DateTranslateViewHelper
+ */
 namespace ReneRoboter\Documentext\ViewHelpers;
 
-class DateTranslateViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+
+/**
+ * Class DateTranslateViewHelper
+ */
+class DateTranslateViewHelper extends AbstractViewHelper
 {
 
     protected $weekDays = [
@@ -16,7 +23,8 @@ class DateTranslateViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
     ];
 
     /**
-     * @param \DateTime $date
+     * @param $date
+     * @return string
      */
     public function render($date)
     {
