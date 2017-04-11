@@ -2,6 +2,7 @@
 <f:layout name="Default" xmlns:f="http://www.w3.org/1999/html" />
 
 <f:section name="content">
+
     <div class="clearfix pager">
         <f:link.action action="list" arguments="{week:prevWeek, year:prevYear}">
             <span class="glyphicon glyphicon-chevron-left pull-left"></span>
@@ -21,9 +22,6 @@
             <f:render section="ListItem" arguments="{content: content, weekBeginning:date.weekDate.start}"/>
         </f:for>
     </div>
-    <h4>
-        {test}
-    </h4>
 </f:section>
 
 
