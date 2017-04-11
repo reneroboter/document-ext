@@ -15,6 +15,7 @@ return [
     ],
     'EXT' => [
         'extConf' => [
+            'autoloader' => 'a:1:{s:38:"enableAutoloaderClearCacheInProduction";s:1:"0";}',
             'documentext' => 'a:0:{}',
             'openid' => 'a:0:{}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
@@ -63,6 +64,16 @@ return [
     'SYS' => [
         'caching' => [
             'cacheConfigurations' => [
+                'autoloader' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\SimpleFileBackend',
+                    'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\PhpFrontend',
+                    'groups' => [
+                        'system',
+                    ],
+                    'options' => [
+                        'defaultLifetime' => 0,
+                    ],
+                ],
                 'extbase_object' => [
                     'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                     'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\VariableFrontend',
@@ -80,6 +91,7 @@ return [
         'displayErrors' => 0,
         'enableDeprecationLog' => false,
         'encryptionKey' => '92d23d2efea0622a11ff02533161d6bea28ab9c0ace9c871342abf673988a52a8708985eb061d78eab89993cf9c73712',
+        'exceptionalErrors' => 20480,
         'isInitialDatabaseImportDone' => true,
         'isInitialInstallationInProgress' => false,
         'sitename' => 'New TYPO3 site',

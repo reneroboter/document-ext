@@ -246,6 +246,12 @@ return [
             'packagePath' => 'typo3/sysext/viewpage/',
             'suggestions' => [],
         ],
+        'autoloader' => [
+            'composerName' => 'lochmueller/autoloader',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/autoloader/',
+            'suggestions' => [],
+        ],
         'documentext' => [
             'composerName' => 'documentext',
             'state' => 'active',
@@ -253,7 +259,7 @@ return [
             'suggestions' => [],
         ],
         'openid' => [
-            'composerName' => 'typo3/cms-openid',
+            'composerName' => 'friendsoftypo3/openid',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/openid/',
             'suggestions' => [],
