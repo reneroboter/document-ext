@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="plugin.ListAction">
-			    <source>plugin.ListAction</source>
+			    <source>ListAction</source>
 			</trans-unit>
 			<trans-unit id="plugin.Calendar">
-			    <source>plugin.Calendar</source>
+			    <source>CalendarAction</source>
 		    </trans-unit>
 			<trans-unit id="tx_documentext_domain_model_content">
 				<source>Content</source>

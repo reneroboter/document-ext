@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-04T10:26:58Z" product-name="documentext">
+        <header/>
+        <body>
+            <trans-unit id="plugin.ListAction">
+                <source>ListAction</source>
+                <target>Listenansicht</target>
+            </trans-unit>
+            <trans-unit id="plugin.Calendar">
+                <source>CalendarAction</source>
+                <target>Kalendaransicht</target>
+            </trans-unit>
+            <trans-unit id="tx_documentext_domain_model_content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="tx_documentext_domain_model_content.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_documentext_domain_model_content.category">
+                <source>Category</source>
+                <target>Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tx_documentext_domain_model_content.workday_at">
+                <source>Workday At</source>
+                <target>Arbeitstag</target>
+            </trans-unit>
+            <trans-unit id="tx_documentext_domain_model_content.created_at">
+                <source>Created At</source>
+                <target>Erstellt</target>
+            </trans-unit>
+            <trans-unit id="tx_documentext_domain_model_content.updated_at">
+                <source>Updated At</source>
+                <target>Bearbeitet</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
