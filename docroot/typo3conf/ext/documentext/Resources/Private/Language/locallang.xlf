@@ -3,6 +3,8 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-04T10:26:58Z" product-name="documentext">
 		<header/>
 		<body>
+			<trans-unit id="backendLayout.Main.ts"><source>Main</source></trans-unit>
+			<trans-unit id="plugin.EntryAction"><source>plugin.EntryAction</source></trans-unit>
 			<trans-unit id="plugin.ListAction">
 			    <source>ListAction</source>
 			</trans-unit>
