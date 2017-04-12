@@ -44,6 +44,7 @@ class ContentController extends ActionController
      * @param integer $year
      *
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
+     * @plugin ListAction
      */
     public function listAction($week = null, $year = null)
     {
@@ -63,6 +64,7 @@ class ContentController extends ActionController
 
     /**
      * @param \ReneRoboter\Documentext\Domain\Model\Content|null $content
+     * @plugin EntryAction
      */
     public function addFormAction(\ReneRoboter\Documentext\Domain\Model\Content $content = null)
     {
